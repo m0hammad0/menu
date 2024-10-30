@@ -1,0 +1,129 @@
+@font-face {
+    font-family: font1;
+    src: url("../font/font1.woff2") format("woff2");
+}
+body {
+    background-color: #15141a;
+}
+.home_header1 {
+    background-color: black;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom:1px solid #2e2e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+.menu-container {
+    margin-top: 8px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    overflow: hidden;
+}
+
+.menu-container.active {
+    overflow: visible;
+}
+
+.button {
+    background-color: #000000;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 13px;
+    width: 1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: width 0.4s;
+}
+
+.menu-container.active .button {
+    width: 1%;
+
+}
+
+.menu-container.active .fas::before {
+    content: '\f00d';
+}
+
+ul {
+    position: absolute;
+    top: 50px;
+    background: #1b1b1b;
+    list-style: none;
+    width: 150px;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 01s ease-in, opacity 0.2s ease;
+}
+
+.menu-container.active ul {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+ul::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #1b1b1b;
+    top: -10px;
+    right: 12px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+ul li {
+    line-height: 35px;
+    padding:  5px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+ul li:hover:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+ul li:hover {
+    box-shadow: inset 0 0 5px #ffd700, inset 0 0 10px #ffe23f;
+}
+
+ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: font1;
+
+}
+
+ul li:hover a {
+    color: #ffd700;
+}
