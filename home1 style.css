@@ -31,7 +31,7 @@ body {
     align-items: right;
     justify-content: right;
     overflow: hidden;
-    flout: right;
+    float: right;
 }
 
 .menu-container.active {
