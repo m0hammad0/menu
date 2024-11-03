@@ -5,6 +5,9 @@
 body {
     background-color: #15141a;
 }
+* {
+    font-family: font1;
+}
 .home_header1 {
     background-color: black;
     height: 50px;
